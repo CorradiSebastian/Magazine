@@ -1,10 +1,7 @@
 *.iml
-.kotlin
-.gradle
 **/build/
 xcuserdata
 !src/**/build/
-local.properties
 .idea
 .DS_Store
 captures
@@ -16,4 +13,3 @@ captures
 !*.xcodeproj/project.xcworkspace/
 !*.xcworkspace/contents.xcworkspacedata
 **/xcshareddata/WorkspaceSettings.xcsettings
-node_modules/
