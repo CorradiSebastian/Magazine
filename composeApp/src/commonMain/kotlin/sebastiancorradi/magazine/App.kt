@@ -27,6 +27,7 @@ import cafe.adriel.voyager.core.screen.Screen
 import cafe.adriel.voyager.navigator.LocalNavigator
 import cafe.adriel.voyager.navigator.Navigator
 import cafe.adriel.voyager.navigator.currentOrThrow
+import ktorscreen.KtorScreen
 import org.jetbrains.compose.resources.painterResource
 
 import magazine.composeapp.generated.resources.Res
@@ -80,6 +81,12 @@ class MainScreen: Screen{
                 navigator.push(PlatformScreen())
             }) {
                 Text(text = "platform depencency screen")
+            }
+            Spacer(modifier = Modifier.size(10.dp))
+            Button(onClick = {
+                navigator.push(KtorScreen())
+            }) {
+                Text(text = "ktor")
             }
         }
     }

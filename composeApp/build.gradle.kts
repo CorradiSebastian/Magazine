@@ -29,6 +29,8 @@ kotlin {
         androidMain.dependencies {
             implementation(libs.compose.uiToolingPreview)
             implementation(libs.androidx.activity.compose)
+            implementation(libs.ktor.client.okhttp)
+            implementation(libs.kotlinx.coroutines.android)
         }
         commonMain.dependencies {
             implementation(libs.compose.runtime)
@@ -55,7 +57,20 @@ kotlin {
 
             //persistencia
             implementation(libs.settings)
+
+            //KTOR
+            implementation(libs.ktor.client.core)
+            implementation(libs.ktor.client.content.negotiation) // <--- THIS FIXES THE ERROR
+            implementation(libs.ktor.serialization.kotlinx.json)   // Required for .json()
+
+            //corroutines
+            implementation(libs.ktor.client.core)
+            implementation(libs.kotlinx.coroutines.core)
         }
+        iosMain.dependencies{
+            implementation(libs.ktor.client.darwin)        }
+
+
         commonTest.dependencies {
             implementation(libs.kotlin.test)
         }
